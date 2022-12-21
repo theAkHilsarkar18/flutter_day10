@@ -9,7 +9,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List l1 = ["🇮🇳","🚩","🇦🇺","🇱🇰","🇯🇵",  "🇬🇧","🇵🇰","🇾🇪"];
-  List l2 = ["India","Hindu","Australia","Shri Lanka","Japan", "United Kingdom","Palistan","Yeman"];
+  List l2 = ["India - Delhi","Hindu - Ayodhya","Australia - Sydney","Shri Lanka - Colombo","Japan - Tokyo", "United Kingdom - London","Pakistan - Islamabad","Yeman - Sana"];
   List colorList = [Colors.green.shade50,Colors.red.shade50,Colors.blue.shade50,Colors.orange.shade50,Colors.red.shade50,Colors.blue.shade50,Colors.green.shade50,Colors.black12];
   List colorList2 = [Colors.green,Colors.red,Colors.blue,Colors.orange,Colors.red,Colors.blue,Colors.green,Colors.black];
 
@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children:
-                    l1.asMap().entries.map((e) => customContainer(e.key,colorList[e.key],colorList2[e.key])).toList(),
+                l1.asMap().entries.map((e) => customContainer(e.key,colorList[e.key],colorList2[e.key])).toList(),
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border:
-            Border.all(color: c3, style: BorderStyle.solid, width: 2),
+        Border.all(color: c3, style: BorderStyle.solid, width: 2),
         color: c1,
       ),
     );
@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
   Widget customContainer2(int j, Color c2 , Color c3) {
     return Container(
       alignment: Alignment.center,
-      child: Text("${l2[j]}"),
+      child: Text("${l2[j]}",style: TextStyle(color: c3,fontSize: 20)),
       height: 80,
       width: 380,
       margin: EdgeInsets.all(10),
